@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\TaskController;
-use App\Models\Task;
+use App\Http\Controllers\ClienteController;
+// use App\Models\Task;
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,10 +27,16 @@ use Illuminate\Support\Facades\Route;
 // });
 // Route::apiResource('tasks', TaskControllerr::class);
 
-Route::get('/tasks',    [TaskController::class, 'index']);
-Route::post('/tasks',   [TaskController::class, 'store']);
-Route::get('/tasks/{id}',   [TaskController::class, 'show']);
-Route::put('/tasks/{id}',   [TaskController::class, 'update']);
-Route::delete('/tasks/{id}',   [TaskController::class, 'destroy']);
+// Route::get('/tasks',    [TaskController::class, 'index']);
+// Route::post('/tasks',   [TaskController::class, 'store']);
+// Route::get('/tasks/{id}',   [TaskController::class, 'show']);
+// Route::put('/tasks/{id}',   [TaskController::class, 'update']);
+// Route::delete('/tasks/{id}',   [TaskController::class, 'destroy']);
+
+Route::get('/clientes', [ClienteController::class, 'index']);
+Route::post('/clientes',   [ClienteController::class, 'store']);
+Route::get('/clientes/{id}',   [ClienteController::class, 'show']);
+Route::put('/clientes/{id}',   [ClienteController::class, 'update']);
+Route::delete('/clientes/{id}',   [ClienteController::class, 'destroy']);
 
 // https://www.youtube.com/watch?v=ZOZNJqpiiL0
