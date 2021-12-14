@@ -33,10 +33,17 @@ use Illuminate\Support\Facades\Route;
 // Route::put('/tasks/{id}',   [TaskController::class, 'update']);
 // Route::delete('/tasks/{id}',   [TaskController::class, 'destroy']);
 
-Route::get('/clientes', [ClienteController::class, 'index']);
-Route::post('/clientes',   [ClienteController::class, 'store']);
+Route::get('/clientes', [ClienteController::class, 'getArbolInOrden']);
+Route::get('/clientes-pre', [ClienteController::class, 'getArbolPreOrden']);
+Route::post('/clientes',   [ClienteController::class, 'postAddNodo']);
 Route::get('/clientes/{id}',   [ClienteController::class, 'show']);
 Route::put('/clientes/{id}',   [ClienteController::class, 'update']);
 Route::delete('/clientes/{id}',   [ClienteController::class, 'destroy']);
+
+// Route::get('/clientes', [ClienteController::class, 'index']);
+// Route::post('/clientes',   [ClienteController::class, 'store']);
+// Route::get('/clientes/{id}',   [ClienteController::class, 'show']);
+// Route::put('/clientes/{id}',   [ClienteController::class, 'update']);
+// Route::delete('/clientes/{id}',   [ClienteController::class, 'destroy']);
 
 // https://www.youtube.com/watch?v=ZOZNJqpiiL0

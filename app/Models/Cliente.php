@@ -17,6 +17,9 @@ class Cliente extends Model
         'dscorreo',
         'cdtelefono'
     ];
-    // 'dstelefonoalter',
-    // 'celular'
+    // 'cdtelefonoalter',
+    // 'cdcelular'
+
+    // public $nmcliente;
+
 }
